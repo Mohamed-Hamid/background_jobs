@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'uglifier'
+gem 'delayed_job_active_record'
 
 group :development, :test do
   gem 'spring'

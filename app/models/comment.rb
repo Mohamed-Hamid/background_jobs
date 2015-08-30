@@ -12,6 +12,8 @@ class Comment < ActiveRecord::Base
   end
 
   def self.total_word_count
-    all.inject(0) {|total, a| total += a.word_count }
+    comment_statistic = Statistic.find_by(title: 'comment')
+    comment_statistic.count = all.inject(0) {|total, a| total += a.word_count }
+    comment_statistic.save
   end
 end
