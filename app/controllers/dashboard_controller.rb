@@ -7,6 +7,6 @@ class DashboardController < ApplicationController
 
     @comments           = Comment.for_dashboard
     @comment_count      = Comment.count
-    @comment_word_count = Comment.total_word_count
+    @comment_word_count = Statistic.find_by(title: 'comment').count
   end
 end

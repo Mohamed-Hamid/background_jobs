@@ -67,7 +67,7 @@ class Article < ActiveRecord::Base
       article.created_at = article.created_at - (rand(300) + 100).hours
       article.tags = tags.sort_by{ rand }.take(3)
       article.save
-      rand(2..6).times do
+      rand(6..30).times do
         Fabricate(:comment, :article => article, :created_at => article.created_at + rand(100).hours)
       end
       yield if block_given?

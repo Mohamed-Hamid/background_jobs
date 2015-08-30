@@ -194,6 +194,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   launchy
+  pry
   rails
   rspec-rails
   sass-rails
